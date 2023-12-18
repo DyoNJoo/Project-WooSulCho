@@ -1,0 +1,230 @@
+@charset "UTF-8";
+	
+@font-face {
+    font-family: 'WandohopeR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/WandohopeR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+#nav li, .detail li, p, div.title{
+	font-family: 'GmarketSansMedium';
+}
+
+
+
+		body{
+            margin: 0;
+            padding: 0;
+        }
+        main{
+            max-width: 1240px;
+            margin: 0 auto;
+            margin-top:72px;
+        }
+        a{
+            text-decoration: none;
+            color: #383433;
+        }
+        #menu{
+            text-align: center;
+        }
+        #menu h3{
+            margin-bottom: 40px;
+        }
+        .menuUl{
+            list-style-type: none;
+            padding: 0;
+        }
+        ul.menuUl li:first-of-type {
+        	overflow: hidden;
+        	white-space:normal;
+        	text-overflow: ellipsis;
+        	word-break: break-word;
+    
+		   display: -webkit-box;
+		   -webkit-line-clamp: 4;
+		   -webkit-box-orient: vertical;
+		   
+		   -webkit-box-align:center;
+        }
+        
+        #product_list{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-column-gap: 20px;
+            grid-row-gap: 40px;
+        }
+        .item{
+            text-align: center;
+        }
+        .productImg{
+            width: 300px; height: 300px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid #ddd;
+
+        }
+        .title{
+            text-align: center;
+            line-height: 1.7em;
+            height: 1.5em;
+            font-size: 1.5em;
+        }
+        .detail{
+            width: 350px;
+            margin: auto;
+        }
+        .detail_info{
+            display: none;
+        }
+        
+        
+        
+        /* 페이지네이션 */
+        .paging{
+        	font-family: 'WandohopeR';
+        	margin-top: 65px;
+        	margin-bottom: 30px;
+        	
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .paging li{
+        	display: inline-block;
+        	text-align: center;
+        	margin: 10px 2px;
+        }
+        .paging li.selected {
+        	color:maroon;
+        }
+        
+        .paging li:first-child > a, .paging li:last-child > a{
+            display:inline-block;
+            margin: 0 18px;
+        	padding: 5px 12px 5px 10px;
+        	height: 1.2em;
+        	line-height: 1.2em;
+        	background-color: #776B5D;
+        	color: #f7f5f2;
+        	border: 1px solid #776B5D;
+        	border-radius: 6px;
+        }
+        .paging li:last-child > a{
+                	padding: 5px 10px 5px 12px;
+        
+        }
+        .paging li > a.number{
+            display:inline-block;
+        	padding: 5px;
+        	width: 1.2em;
+        	height: 1.2em;
+        	line-height: 1.2em;
+        }
+        .paging li.selected > a{
+        	pointer-events: none;
+         	cursor: default;
+        	border: 1px solid #383433;
+        	font-weight:bold;
+        	border-radius: 6px;
+        }
+        .paging li > a.disabled{
+         	color:gray;
+         	pointer-events: none;
+         	cursor: default;
+         	background-color: transparent;
+         	
+         	border: 1px solid gray;
+         	
+        }
+        
+       
+        #bannerImg{
+        	display:none;
+            max-width: 1240px;
+            height:165px;
+            margin: 40px auto;
+            overflow: hidden;
+
+        }
+        #bannerImg img{
+            width: 100%;
+            position: relative;
+            bottom: 534px;  
+        }
+
+
+		/* 검색 메뉴 */
+		#searchBar, #searchBar input{
+			font-family: 'GmarketSansMedium';
+			font-size: 17px;
+		}
+		#searchBar{	
+			margin-bottom:30px;
+		}
+        #searchBox > *{
+        	margin: 0px;
+        	padding: 0px;
+        }
+        
+        /* 검색창 디자인 */
+        #searchBox{
+        /* #776B5D */
+        	border: 3px solid maroon;
+        	display: flex;
+        	height: 28px;
+        	padding-left: 3px;
+        }
+        #searchBox > input {
+        	border: none;
+       		margin: 0;
+       		padding: 0;
+        }
+        #searchBox > input#search{
+        	width: 180px;
+        }
+        #searchBox > input#search:focus{
+        	outline: none;
+        }
+        #searchBox > input#searchButton{
+        /* #776B5D */
+        	background-color: maroon;
+        	color: #f7f5f2;
+        	padding: 0px 5px;
+        }
+        #searchBox > input#searchButton:hover{
+        	cursor: pointer;
+        }
+        #resetButton{
+        	border: none;
+        	width: 24px;
+        	height: 24px;
+        	background-size: 24px;
+        	background-image: url("../img/items/reset.png");
+        	background-color: transparent;
+        	opacity: 0.7;
+        	margin-left: 0;
+        	transition: all 0.4s ease;
+        }
+        #resetButton:active{
+        	transform: rotate( 30deg );
+        	cursor: pointer;
+        }
+        
+        /* 라디오 버튼 */
+        input[type='radio']{
+        	margin-right: 5px;
+        }
+        
+        hr{
+        	margin: 4px 0px;
+        	border: 0;
+    		height: 1px;
+		    background: #bbb;
+        }
+        
+        

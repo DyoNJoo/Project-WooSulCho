@@ -1,0 +1,118 @@
+@charset "UTF-8";
+.mypage{
+	width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E2DED5;
+    padding: 0px;
+}
+.myinfo {    
+	display: flex;
+    align-items: center;
+    flex-direction: column;
+	border-radius: 20px;
+	background-color:white;	
+	height: 700px;
+	width: 600px;
+	text-align: center;
+}
+.myinfo h3{
+	color: #0F2027;
+    font-size: 2em;
+    margin-top: 100px;
+    margin-bottom:65px;
+ 
+}
+
+.myinfo table {
+	list-style-type: none;
+	text-decoration: none;
+}
+
+.myinfo tr {
+	margin-bottom: 40px;
+}
+
+.myinfo td {
+	padding: 15px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.myinfo .editbtn  {
+	background-color: #776B5D; 
+	color: #fff;
+	border: none;
+	padding: 15px 70px;
+	margin-top: 30px;
+	border-radius: 20px;
+	cursor: pointer;
+	margin-left: 5px;
+	font-size:1.25em;
+	font-weight:bold;
+		transition: all 0.5s ease;
+}
+
+.myinfo .editbtn:hover {
+	background-color:  #B0A695;
+}
+.savebtn{
+	background-color: #776B5D; 
+	color: #fff;
+	border: none;
+	padding: 15px 30px;
+	margin-top: 27px;
+	border-radius: 20px;
+	cursor: pointer;
+	margin-left: 300px;
+	font-size:1.25em;
+	font-weight:bold;
+	transition: all 0.5s ease;
+	
+}
+.savebtn:hover{
+	background-color: #B0A695;
+}
+.change{
+	border:1px solid #B0A695;
+	padding: 10px 10px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size:0.8em;
+	font-weight:bold;
+
+}
+.emailbtn{
+	background-color:#776B5D; 
+	padding: 10px 10px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size:0.8em;
+	font-weight:bold;
+	border:none;
+	color:white;
+	position:absolute;
+	margin-left:10px;
+	transition: all 0.5s ease;
+}
+.emailbtn:hover{	
+	background-color: #B0A695; 
+}
+.saveitems{
+	background-color: #B0A695; 
+	color: #fff;
+	border: none;
+	padding: 15px 80px;
+	margin-top: 30px;
+	border-radius: 20px;
+	cursor: pointer;	
+	font-size:1.25em;
+	font-weight:bold;
+	transition: all 0.5s ease;
+}
+.saveitems:hover{
+	background-color:#776B5D; 
+}

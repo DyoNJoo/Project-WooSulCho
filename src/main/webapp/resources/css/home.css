@@ -1,0 +1,747 @@
+@charset "UTF-8";
+@import
+	url('http://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap')
+	;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.fade-class {
+  position: relative;
+  left: 200px;
+  opacity: 0;
+  transition: left 1.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+}
+.fade-in {
+  transition: left 1.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+  left: 0px;
+  opacity: 1;
+}
+/* 전체페이지 */
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+}
+body{
+	background-image: url("../img/items/1702347507751.jpg");
+	background-size: 50%;
+	overflow-x: auto; 
+}
+/*글씨 슬라이드 
+@keyframes slide {
+from { 
+	right:-10%;
+	opacity: 0;
+}
+
+to {
+	right: 5%;
+	opacity: 1;
+}
+
+}
+
+@keyframes disappear {
+from { 
+	right:5%;
+	opacity: 1;
+}
+
+to {
+	right:-10%;
+	opacity: 0;
+}
+
+}
+*/
+/* 오프닝 section */
+.video {
+	margin:0 auto;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#video_area {
+	position:absolute;
+    padding: 0;
+    width:100vw;
+    height:100vh;
+    right: 0;
+}
+
+#background_video {
+    z-index: -1;
+    position: absolute;
+	width:100%;
+	filter: brightness(85%) contrast(0.95);
+	
+}
+
+@media screen and (max-aspect-ratio: 1280/720) {
+    #background_video {
+        width: auto;
+        height:100vh;
+    }
+}
+.click{
+	z-index:5;
+	width:30px;
+	height:30px;
+	position:absolute;
+	top:85%;
+	right:50%;
+	cursor: pointer;
+ animation: blink 1s ease-in-out infinite alternate;
+}
+.click-me{
+	z-index:5;
+	font-size:30px;
+	color:white;
+	position:absolute;
+	top:89%;
+	right:43.1%;
+	font-family: 'MYYeongnamnu';
+	cursor: pointer;
+  animation: blink 1s ease-in-out infinite alternate;
+}
+
+@keyframes blink{
+  0% {opacity: 0.2;}
+  100% {opacity: 1;}
+}
+.wrap {
+    background: linear-gradient(to left, rgb(0, 0, 0), rgb(255, 255, 255));
+    mix-blend-mode: overlay;
+}
+/*chat icon*/
+    .chat-icon{
+      position: fixed;
+      bottom: 30px;
+      right: 40px;
+      width: 40px;
+      height: 40px;
+      z-index: 9999;
+      animation: blink 3.5s ease-in-out infinite alternate;
+    }
+
+/*1번 section*/
+.container {
+  display: flex;
+  flex-direction: column;
+  background-size: 100%;
+  z-index: -10;
+}
+
+.content1 {
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  font-size: 0;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.img-blur-left{
+  position: absolute;
+  height: 100vh;
+  width: 35%;
+  z-index: 5;
+  backdrop-filter: blur(10px);
+}
+.img-blur-right{
+  position: absolute;
+  height: 100vh;
+  width: 35%;
+  z-index: 5;
+  backdrop-filter: blur(10px);
+}
+.swiper-container {
+  top: 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-wrapper {
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  position: relative;
+  overflow: hidden; /* 추가된 부분: 자식 요소의 넘치는 부분을 숨김 */
+}
+
+.swiper-slide img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+ .woosulcho {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: bold;
+	font-size: 100px;
+	color: white;
+	z-index: 1001;
+   font-family: 'MYYeongnamnu';
+}
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.main-text-right1{
+	position:absolute;
+	top:35%;
+	left:65%;
+	text-align:center;
+	font-weight: bold;
+	font-size: 35px;
+	color: white;
+	z-index: 1001;
+font-family: 'NanumSquareNeo-Variable';
+}
+.main-text-right2{
+	position:absolute;
+	top:40%;
+	left:73%;
+	text-align:center;
+	font-weight: bold;
+	font-size: 35px;
+	color: white;
+	z-index: 1001;
+font-family: 'NanumSquareNeo-Variable';
+}
+.main-text-right3{
+	position:absolute;
+	top:45%;
+	left:77%;
+	text-align:center;
+	font-weight: bold;
+	font-size: 35px;
+	color: white;
+	z-index: 1001;
+font-family: 'NanumSquareNeo-Variable';
+}
+.recommend-btn-right{
+	position:absolute;
+	top:53%;
+	left:76%;
+	text-align:center;
+	font-weight: bold;
+	font-size: 35px;
+	color: white;
+	z-index: 1001;
+	background:rgba(255, 255, 255, 0);
+font-family: 'NanumSquareNeo-Variable';
+	border:2px solid white;
+	border-radius:30px;
+	padding:10px 50px;
+}
+ .main-text-left1{
+	position:absolute;
+	top:40%;
+	left:15%;
+	text-align:center;
+	font-weight: bold;
+	font-size: 35px;
+	color: white;
+	z-index: 1001;
+font-family: 'NanumSquareNeo-Variable';
+}
+ .main-text-left2{
+	position:absolute;
+	top:45%;
+	left:12%;
+	text-align:center;
+	font-weight: bold;
+	font-size: 35px;
+	color: white;
+	z-index: 1001;
+font-family: 'NanumSquareNeo-Variable';
+}
+.recommend-btn-left{
+		position:absolute;
+	top:53%;
+	left:13.5%;
+	text-align:center;
+	font-weight: bold;
+	font-size: 35px;
+	color: white;
+	z-index: 1001;
+	background:rgba(255, 255, 255, 0);
+font-family: 'NanumSquareNeo-Variable';
+	border:2px solid white;
+	border-radius:30px;
+	padding:10px 50px;
+	
+}
+.main-text-right4{
+	position:absolute;
+	top:38%;
+	left:76%;
+	text-align:center;
+	font-weight: bold;
+	font-size: 66px;
+	color: white;
+	z-index: 1001;
+   font-family: 'MYYeongnamnu';
+}
+.main-text-right5{
+	position:absolute;
+	top:46%;
+	left:76%;
+	text-align:center;
+	font-weight: bold;
+	font-size: 66px;
+	color: white;
+	z-index: 1001;
+   font-family: 'MYYeongnamnu';
+}
+.main-text-right6{
+	position:absolute;
+	top:54%;
+	left:68.5%;
+	text-align:center;
+	font-weight: bold;
+	font-size: 66px;
+	color: white;
+	z-index: 1001;
+   font-family: 'MYYeongnamnu';
+}
+.main-text-right7{
+	position:absolute;
+	top:28%;
+	left:66.5%;
+	text-align:center;
+	font-weight: bold;
+	font-size: 66px;
+	color: white;
+	z-index: 1001;
+   font-family: 'MYYeongnamnu';
+}
+/* .img-blur 요소의 위치를 Swiper 이미지 상단에 배치 */
+.swiper-slide .img-blur-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  z-index: 3; 
+}
+.swiper-slide .img-blur-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  z-index: 3; 
+}
+
+@font-face {
+    font-family: 'MYYeongnamnu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/*2번 section*/
+@font-face {
+    font-family: 'WandohopeR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/WandohopeR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.Recommend{
+	font-size:50px;
+	font-family: 'WandohopeR';
+	text-align:center;
+	padding-top:150px;
+	padding-bottom:100px;
+	font-weight:bold;
+}
+ .wsch-recommend{
+	width:80%;
+	height:100vh;
+	min-height: 537px;
+	position:relative;
+	margin:0 auto;
+}
+@font-face {
+    font-family: 'NPSfontBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+.recommend-text1 {
+   position: absolute;
+   top: 8%;
+   right: 40%;
+   font-weight: bold;
+   font-size: 70px;  
+   font-family: 'MYYeongnamnu';
+}
+
+.recommend-text2 {
+   position: absolute;
+   top:18%;
+   right:42%;
+   font-weight: bold;
+   font-size: 70px;
+   color:#776B5D;  
+   font-family: 'MYYeongnamnu';
+}
+.recommend-text3{
+   position: absolute;
+   top: 0%;
+   right: 36%;
+   font-weight: normal;
+   font-size: 30px;  
+   font-family: 'MYYeongnamnu';
+}
+
+.testbtn {
+   height: 64px;
+   weight: auto;
+   position: absolute;
+   top: 72%;
+   right: 39.5%;
+   border: none;
+   font-size: 30px;
+   color: #fff;
+   padding: 7px 71px 7px 30px;
+   background-color: #776B5D;
+   border-radius: 26px;
+   margin: 14px;
+   cursor: pointer;
+   transition: all 0.5s ease;
+   font-family: 'GmarketSansMedium';
+   font-weight:bold;
+}
+.testbtn:hover{
+	background: #B0A695;
+}
+.testimg1 {
+	position: absolute;
+	top:30%;
+	left:28.5%;
+	border-radius:80px;
+	
+}
+
+.testimg3 {
+	position: inherit;
+	top:17%;
+	left:81%;
+	height:40px;
+	width: 40px;
+	animation: blink 1s ease-in-out infinite alternate;
+}
+
+
+
+/*3번 section*/
+.best-item {
+	height:70vh;
+	width:100%;
+	overflow: hidden;
+	font-family: 'Poppins', sans-serif;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+/* 	background-color:#B0A695; */
+	margin:0 auto;
+}
+.best{
+ font-family: 'WandohopeR';
+	font-size:55px;
+	position:absolute;
+	top:10%;
+	left:48%;
+	right:50%;
+	transform: translate(-50%, -50%);
+} 
+.slide-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1120px;
+    width: 100%;
+    max-height: 600px;
+    padding: 40px 0;
+}
+.slide-content {
+	margin: 0 40px;
+	overflow: hidden;
+	border-radius: 25px;
+}
+.card {
+	width: 320px;
+	border-radius: 25px;
+	background-color: #fff;
+}
+.image-content, .card-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px 14px;
+}
+.image-content {
+	position: relative;
+	row-gap: 5px;
+	padding: 25px 0;
+}
+
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #E2DED5;
+	border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before, .overlay::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: -40px;
+	height: 40px;
+	width: 40px;
+	background-color: #E2DED5;
+}
+
+.overlay::after {
+	border-radius: 0 25px 0 0;
+	background-color: #fff;
+}
+
+.card-image {
+	position: relative;
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	background: #fff;
+	padding: 3px;
+}
+
+.card-image .card-img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 4px solid #E2DED5;
+}
+
+.name {
+	font-size: 18px;
+	font-weight: 500;
+	color: #333;
+}
+
+.description {
+	height: 150px;
+	font-size: 14px;
+	color: #707070;
+	text-align: center;
+}
+
+.button {
+	border: none;
+	font-size: 16px;
+	color: #fff;
+	padding: 8px 16px;
+	background-color:   #776B5D;
+	border-radius: 6px;
+	margin: 14px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.button:hover {
+	background: #B0A695;
+}
+
+.swiper-navBtn {
+	color:   #E2DED5;
+	transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+	color: #776B5D;
+}
+
+.swiper-navBtn::before, .swiper-navBtn::after {
+	font-size: 40px;
+}
+
+.swiper-button-next {
+	right: 0;
+}
+
+.swiper-button-prev {
+	left: 0;
+}
+.swiper-pagination-bullet {
+	
+	background: transparent;
+	border: 1px solid  #E2DED5;
+	opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+
+	transition: width .5s;
+	border-radius: 5px;
+	background: #E2DED5;
+	border: 1px solid transparent;
+}
+
+/*4번*/
+.main-video{
+	border:none;
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+    position: relative;	
+}
+#main_video_area{
+	position:absolute;
+	left:0;
+    width:100%;
+    height:55vh;
+    
+}
+#main_video {
+    z-index: -1;
+    top:0;
+    left:0;
+    object-fit: cover;
+    position: absolute;
+	width:100%;
+	height:55vh;
+	/* filter: brightness(85%) contrast(0.95); */
+	
+}
+.video-text{
+	color:white; 
+	font-size:50px;
+	position:absolute;
+	top:33%;
+	right:43.1%;
+	font-family: 'WandohopeR';
+}
+.video-text-2{
+	color:white; 
+	font-size:50px;
+	position:absolute;
+	top:43%;
+	right:40.1%;
+	font-family: 'WandohopeR';
+}
+/*5번section*/
+
+.event-list {
+   height: 800px;
+   width:100%;
+   background: linear-gradient(rgba(255, 255, 255, 0) 70%, rgba(226, 222, 213, 1) 30%);
+   margin:0 auto;
+   padding-top:100px;
+   display: flex;
+   overflow: hidden;
+   font-family: 'NPSfontBold';
+   position: relative;
+   justify-content:center;
+}
+.event{
+   font-size:50px;
+   font-family: 'WandohopeR';
+}
+
+.event-list-wrap{
+   overflow:hidden;
+   width:1500px;
+   position:absolute;
+   top:33%;
+}
+.poster-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 1300px;
+    margin: auto 0;  
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.poster-item {
+    width: 430px; 
+    height: 500px;
+    background-color: #f0f0f0;
+    margin-bottom: 20px; 
+    margin-right: 250px; 
+}
+.poster-item:hover{
+	transform: scale(1.05);
+}
+/* 마지막 아이템의 마진을 제거합니다. */
+.poster-item:last-child {
+    margin-right: 0;
+}
+
+
+/*6번section*/
+@font-face {
+    font-family: 'iceJaram-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceJaram-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.map {
+	position:relative;
+    height:300px; 
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    padding:25px 10% 25px 25px;
+    background-color:rgba(226, 222, 213, 1);
+}
+
+.map-text1{
+	position: absolute;
+	top: 28%;
+	left: 17%;
+	font-weight: bold;
+	font-size: 70px;
+	animation: ease-out;
+	 font-family: 'iceJaram-Rg';
+}
+.map-text2{
+	position: absolute;
+	top: 48%;
+	left: 31%;
+	font-weight: bold;
+	font-size: 70px;
+	animation: ease-out;
+ font-family: 'iceJaram-Rg';
+}

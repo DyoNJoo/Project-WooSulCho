@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@font-face {
+	font-family: 'Cafe24Supermagic-Bold-v1.0';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2')
+		format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+	
+  .event_list_page {
+    width: 80%;
+    max-width: 1200px;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  .event_list_img {
+    background: url('https://innertrip.co.kr/wp-content/uploads/2022/08/%EC%A0%84%ED%86%B5%EC%A3%BC-%ED%85%8C%EC%9D%B4%EC%8A%A4%ED%8C%85-1.png');
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 50px; /* 위치를 조금 내립니다 */
+  }
+
+  .text {
+  font-family: 'Cafe24Supermagic-Bold-v1.0';
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    z-index: 1;
+    font-weight:bold;
+  }
+
+  .write_form {
+  font-family: 'GmarketSansMedium';
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    margin-top: 370px;
+  }
+
+  .write_form label {
+  font-family: 'GmarketSansMedium';
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .write_form input,
+  .write_form textarea {
+  font-family: 'GmarketSansMedium';
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  .write_form .button_group {
+  font-family: 'GmarketSansMedium';
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .write_form .rewrite,
+  .write_form .register {
+  font-family: 'GmarketSansMedium';
+    padding: 10px 15px;
+    background-color: #B0A695;
+    color: white;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+
+  .write_form .register {
+  font-family: 'GmarketSansMedium';
+    background-color: #776B5D; 
+  }
+
+  .write_form .rewrite:hover,
+  .write_form .register:hover {
+    color: #fff;
+    transform: scale(1.05);
+  }

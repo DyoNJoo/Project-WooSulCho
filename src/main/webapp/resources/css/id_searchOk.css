@@ -1,0 +1,68 @@
+@charset "UTF-8";
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "G마켓 산스";
+        }
+
+        body {
+            background-color: #E2DED5;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            position:relative;
+        }
+		.title{
+			position:absolute;
+			top:30%;
+			left:45%;
+			border-radius: 30px;
+		}
+		.idsearchbox{
+			background-color:white;
+			width:500px;
+			height:500px;
+			border-radius: 30px;
+			box-shadow: 5px 3px 5px 3px gray;
+		}
+.find_id {
+    font-size: 1.5em;
+    font-weight: bold;
+    position: absolute;
+}
+
+.find_id:nth-child(1) {
+    top: 41%;
+    left: 43%;
+}
+
+.find_id:nth-child(2) {
+    top: 48%; 
+    left: 43%;
+}
+
+.find_id:nth-child(3) {
+    top: 55%;
+    left: 43%;
+}
+	 #searchok {
+            width: 20%;
+            height: 50px;
+            border: 0;
+            outline: none;
+            border-radius: 40px;
+            background: #776B5D; 
+            font-weight:bold;
+            color: white;
+            font-size: 1.2em;
+            letter-spacing: 2px;
+            position:absolute;
+            top:66%;
+            left:40.5%;
+        }
